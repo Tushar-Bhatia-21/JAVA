@@ -22,6 +22,7 @@ public class Student_interface{
     {
         int M1;
         int M2;
+        int total=0;
         void put_marks()
         {
             System.out.println("Enter the marks of Subject 1: ");
@@ -29,14 +30,16 @@ public class Student_interface{
             
             System.out.println("Enter the marks of Subject 2: ");
             M2=sc.nextInt();
+            total=M1+M2;
         }
+        
 
         void get_marks()
         {
             System.out.println("The marks of Subject 1 is: "+M1);
             System.out.println("The marks of Subject 2 is: "+M2);
-            
         }
+
     }
 
     public interface sports
@@ -46,9 +49,7 @@ public class Student_interface{
     }
 
     public class Result extends Test implements sports
-    {
-        int total=M1+M2;
-        
+    {   
         public void put_Wt()
         {
             System.out.println("Sports weight is: "+sport_wt);
